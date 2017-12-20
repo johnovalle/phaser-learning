@@ -15,6 +15,8 @@ app.use(require('webpack-dev-middleware')(compiler, {
   publicPath: config.output.publicPath
 }));
 
+app.use('/assets', express.static(__dirname + '/spaceGame/assets'));
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../src/index.html'));
 });
