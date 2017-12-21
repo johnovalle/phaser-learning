@@ -1,1 +1,1 @@
-let SpaceHipster = SpaceHipster || {};
+import { SpaceHipster } from './Base';

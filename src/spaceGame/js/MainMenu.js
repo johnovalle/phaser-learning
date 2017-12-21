@@ -1,4 +1,4 @@
-import SpaceHipster from './Base';
+import { SpaceHipster } from './Base';
 SpaceHipster.MainMenu = function(){};
 console.log(SpaceHipster);
 SpaceHipster.MainMenu.prototype = {

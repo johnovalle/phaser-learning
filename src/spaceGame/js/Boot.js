@@ -1,5 +1,6 @@
-import SpaceHipster from './Base';
-let Phaser = global.Phaser;
+import { SpaceHipster, Phaser } from './Base';
+
+console.log("phaser in boot", Phaser);
 SpaceHipster.Boot = function(){};
 console.log(SpaceHipster);
 //setting game configuration and loading the assets for the loading screen
@@ -16,6 +17,7 @@ SpaceHipster.Boot.prototype = {
 
    //scaling options
  this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+ console.log(this.scale);
  this.scale.minWidth = 240;
  this.scale.minHeight = 170;
  this.scale.maxWidth = 2880;
@@ -25,7 +27,7 @@ SpaceHipster.Boot.prototype = {
  this.scale.pageAlignHorizontally = true;
 
  //screen size will be set automatically
- this.scale.setScreenSize(true);
+
 
  //physics system for movement
  this.game.physics.startSystem(Phaser.Physics.ARCADE);

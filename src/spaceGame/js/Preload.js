@@ -1,8 +1,7 @@
-import SpaceHipster from './Base';
+import { SpaceHipster } from './Base';
 
 //loading the game assets
 SpaceHipster.Preload = function(){};
-console.log(SpaceHipster);
 SpaceHipster.Preload.prototype = {
  preload: function() {
   console.log("loading assets in preload");

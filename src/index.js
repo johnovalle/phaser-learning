@@ -1,10 +1,9 @@
 import './index.css';
 
-global.PIXI = require('phaser-ce/build/custom/pixi');
-global.p2 = require('phaser-ce/build/custom/p2');
-global.Phaser = require('phaser-ce');
-let Phaser = global.Phaser;
-import SpaceHipster from './spaceGame/js/Base';
+
+//let Phaser = global.Phaser;
+console.log("phaser in index", Phaser);
+import { SpaceHipster, Phaser } from './spaceGame/js/Base';
 import './spaceGame/js/Boot';
 import './spaceGame/js/Preload';
 import './spaceGame/js/MainMenu';
