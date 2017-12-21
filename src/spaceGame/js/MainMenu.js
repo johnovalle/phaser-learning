@@ -2,6 +2,12 @@ import { SpaceHipster } from './Base';
 SpaceHipster.MainMenu = function(){};
 console.log(SpaceHipster);
 SpaceHipster.MainMenu.prototype = {
+  init: function(score) {
+    score = score || 0;
+    this.highestScore = this.highestScore || 0;
+
+    this.highestScore = Math.max(score, this.highestScore);
+   },
   create: function() {
     console.log("in main");
     //show the space tile, repeated
@@ -17,7 +23,7 @@ SpaceHipster.MainMenu.prototype = {
     t.anchor.set(0.5);
 
     //highest score
-    text = "Highest score: "+this.highestScore;
+    text = "Highest score: " + this.highestScore;
     style = { font: "15px Arial", fill: "#fff", align: "center" };
 
     var h = this.game.add.text(this.game.width/2, this.game.height/2 + 50, text, style);
