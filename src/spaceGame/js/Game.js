@@ -42,13 +42,12 @@ SpaceHipster.Game.prototype = {
 
       //move on the direction of the input
       this.game.physics.arcade.moveToPointer(this.player, this.playerSpeed);
-
-      //collision between player and asteroids
-      this.game.physics.arcade.collide(this.player, this.asteroids, this.hitAsteroid, null, this);
-
-      //overlapping between player and collectables
-      this.game.physics.arcade.overlap(this.player, this.collectables, this.collect, null, this);
     }
+    //collision between player and asteroids
+    this.game.physics.arcade.collide(this.player, this.asteroids, this.hitAsteroid, null, this);
+
+    //overlapping between player and collectables
+    this.game.physics.arcade.overlap(this.player, this.collectables, this.collect, null, this);
   },
   generateAsteriods: function() {
     this.asteroids = this.game.add.group();
@@ -58,7 +57,7 @@ SpaceHipster.Game.prototype = {
     this.asteroids.physicsBodyType = Phaser.Physics.ARCADE;
 
     //phaser's random number generator
-    var numAsteroids = this.game.rnd.integerInRange(150, 200)
+    var numAsteroids = this.game.rnd.integerInRange(30, 50)
     var asteriod;
 
     for (var i = 0; i < numAsteroids; i++) {
@@ -81,7 +80,7 @@ SpaceHipster.Game.prototype = {
     this.collectables.physicsBodyType = Phaser.Physics.ARCADE;
 
     //phaser's random number generator
-    var numCollectables = this.game.rnd.integerInRange(100, 150)
+    var numCollectables = this.game.rnd.integerInRange(30, 50)
     var collectable;
 
     for (var i = 0; i < numCollectables; i++) {
