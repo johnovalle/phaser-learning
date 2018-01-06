@@ -4,7 +4,8 @@
   "description": "Learning some phaser",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch test:watch",
+    "oldstart": "npm-run-all --parallel open:src lint:watch test:watch",
+    "start": "open:src",
     "open:src": "babel-node buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
