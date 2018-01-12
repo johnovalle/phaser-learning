@@ -17,6 +17,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.use(express.static(path.join(__dirname + '/../src/spaceGame')));
 app.use(express.static(path.join(__dirname + '/../src/first')));
 app.use(express.static(path.join(__dirname + '/../src/turnRpg')));
+app.use(express.static(path.join(__dirname + '/../src/boardGame')));
 // console.log(path.join(__dirname + '/../src/spaceGame'))
 
 app.get('/', (req, res) => {
